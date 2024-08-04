@@ -3,6 +3,7 @@ function min(a, b) {
     if (a > b) return b; 
     else return a;
 }
+//author's version - exactly same
 
 /* We’ve seen that % (the remainder operator) can be used to test whether a
 number is even or odd by using % 2 to see whether it’s divisible by two. Here’s
@@ -24,6 +25,13 @@ function isEven(x) {
         else return isEven(x + 2);
     }
 }
+// author's version 
+function isEven(n) {
+    if (n == 0) return true;
+    else if (n == 1) return false;
+    else if (n < 0) return isEven(-n);
+    else return isEven(n - 2);
+  }
 
 /* Write a function countBs that takes a string as its only argument and returns
 a number that indicates how many uppercase “B” characters there are in the
@@ -44,3 +52,4 @@ function countChar(str,char) {
 function countBs(str) {
     return countChar(str,"B");
 }
+// author's version - basically same
